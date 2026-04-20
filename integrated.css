@@ -1,0 +1,991 @@
+*, *::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* This stops the main window from scrolling */
+}
+.container a {
+    text-decoration: none;
+}
+
+.container span {
+    color: rgb(179, 179, 179);
+}
+
+.container input {
+    border: 0;
+}
+
+.container input:focus {
+    outline: none;
+}
+
+.container button {
+    border: 0;
+    cursor: pointer;
+}
+
+/*
+.container * {
+    outline: 1px solid white !important;
+} 
+*/
+
+.container {
+    height: 3rem;
+    width: 100%;
+    min-width: 900px; /* prevents collapse*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    overflow: hidden;
+    position: fixed;
+}
+
+.container #section {
+    background-color: black;
+    position: relative;
+}
+
+/* todo: section01 */
+.container .section01 > a {
+    display: block;
+    height: 1.5rem;
+    width: 1.5rem;
+    top: 10%;
+    position: absolute;
+    left: 1rem;
+    background-image: url("black-spotify.png");
+    background-size: contain;
+    transform: scale(0.8);
+}
+
+/* todo: end */
+
+.container .section02 > .icon-div {
+    height: 80%;
+    width: 13%;
+    background-color: black;
+    position: absolute;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* *home */
+.container .section02 .icon-div #icon-home {
+    font-variation-settings: 'FILL' 1;
+    display: flex;
+    height: 100%;
+    width: 70%;
+    background-color: rgb(31, 31, 31);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container #icon-home > span {
+    font-variation-settings: 'FILL' 1;
+    color: white;
+}
+
+.container .section02 .icon-div #icon-home:hover {
+    transform: scale(1.02);
+    color: white;
+    background-color: rgb(46, 46, 46);
+}
+
+/* * home-end */
+
+/* * search-box */
+.container .search-box {
+    background-color: rgb(31, 31, 31);
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    margin-left: 2.5%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.container .search-box:focus-within {
+    border: 2px solid white;
+    background-color: rgb(46, 46, 46);
+}
+
+/* *search anchor */
+.container .search-box .icon-div {
+    height: 100%;
+    width: 15%;
+}
+
+.container .search-box .icon-div a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .search-box .writing-div {
+    height: 100%;
+    width: 70%;
+}
+
+.container .writing-div input {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(31, 31, 31);
+}
+
+.container .writing-div input:focus {
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+
+/* todo: section03 */
+/* * explore premium button */
+.container .explore-premium {
+    height: 60%;
+    width: 35%;
+    position: absolute;
+    top: 20%;
+    left: 2.5%;
+    border-radius: 25px;
+    overflow: hidden;
+    transform: scale(0.8);
+}
+
+.container #btn-explore-premium {
+    height: 100%;
+    width: 100%;
+}
+
+.container .explore-premium:hover {
+    transform: scale(0.85);
+    background-color: rgb(189, 189, 189);
+}
+
+.container #btn-explore-premium:active {
+    background-color: rgb(220, 220, 220);
+}
+
+.container #btn-explore-premium:active {
+    background-color: white;
+}
+
+.container #btn-explore-premium:hover button {
+    background-color: rgb(240, 240, 240);
+}
+
+.container #btn-explore-premium > span {
+    font-weight: 600;
+    font-size: x-small;
+    color: black;
+}
+
+/* * profile */
+.container .section03 .profile {
+    position: absolute;
+    height: 60%;
+    width: 60%;
+    top: 20%;
+    left: 40%;
+    display: flex;
+    background-color: black;
+    transform: scale(0.7)
+}
+
+/* * anchor install app */
+.container .section03 .profile > a {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: Arial;
+}
+
+.container .section03 .profile a > span {
+    font-weight: 600;
+}
+
+.container .section03 .profile > a:hover {
+    transform: scale(1.02);
+}
+
+.container .section03 .profile > a:hover span {
+    color: white;
+}
+
+/* * two buttons div */
+.container .profile-button-div {
+    display: flex;
+    height: 100%;
+    width: 25%;
+    margin-left: 5%;
+    justify-content: space-around;
+}
+
+.container .profile-button-div button {
+    background-color: black;
+}
+
+.container .profile-button-div button > span {
+    color: rgb(196, 196, 196);
+}
+
+.container .profile-button-div button:hover span {
+    color: white;
+}
+
+.container .profile-button-div button:active span {
+    color: rgb(196, 196, 196);
+}
+
+.container .profile-button-div button:hover {
+    transform: scale(1.02);
+}
+
+/* * dp */
+.container #dp {
+    height: 100%;
+    width: 15%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 2.5%;
+    transform: scale(1.2);
+}
+
+.container #dp > a {
+    height: 100%;
+    width: 80%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(31, 31, 31);
+    transition: 0.02s;
+}
+
+.container #dp > a:hover {
+    transform: scale(1.05);
+}
+
+.container #dp > a > span {
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+    color: black;
+    font-weight: 900;
+    font-size: large;
+}
+
+
+/* .main-container * {
+    outline: 1px solid black;
+} */
+
+.main-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-container a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.main-container button {
+    border: none;
+    cursor: pointer;
+}
+
+/** text*/
+.main-container .roboto-text {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.main-container .sidebar-left-content-section-div01 > #span02 {
+    font-weight: 400;
+    font-variation-settings: "wdth" 200;
+    font-size: smaller;
+    line-height: 15px;
+}
+
+/*! start grid*/
+.main-container {
+    height: calc(100vh - (3rem + 88px));
+    width: 100vw;
+    min-width: 900px; /* prevents collapses of items */
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 4px;
+    background-color: black;
+    position:absolute;
+    top:3rem;
+}
+
+.main-container .sidebar {
+    grid-row: 1/6;
+    background-color: #121212;
+}
+
+.main-container main {
+    grid-row: 1/6;
+    grid-column: 2/5;
+}
+
+/*! end */
+
+/** sidebar left */
+.main-container #sidebar-left {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+.main-container #sidebar-left > header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px 0 8px;
+
+}
+
+.main-container #sidebar-left > header div {
+    height: 40%;
+    width: 50%;
+}
+
+.main-container #sidebar-left-btn01-div button {
+    background-color: #1f1f1f;
+    border: 0;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.main-container #sidebar-left-btn01-div button span {
+    background-color: #121212;
+}
+
+.main-container #sidebar-left-btn02-div {
+    display: flex;
+    justify-content: end;
+}
+
+.main-container #sidebar-left-btn02-div button {
+    background-color: #121212;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.main-container #sidebar-left-btn02 {
+    display: flex;
+    height: 100%;
+    width: 27%;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+}
+
+.main-container #sidebar-left-btn02 span {
+    border-radius: 50%;
+    background-color: #1f1f1f;
+}
+
+/*? starts left sidebar content */
+.main-container #sidebar-left-content {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container #sidebar-left-content section {
+    width: 96%;
+    min-height: 30%;
+    background-color: #1f1f1f;
+    margin: 10px 2%;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.main-container .sidebar-left-content-section-div01 span {
+    color: white;
+}
+
+.main-container .sidebar-left-content-section-div01 > span {
+    font-weight: 700;
+}
+
+.main-container #sidebar-left-content section div button {
+    padding: 2px 10px 2px 10px;
+    border-radius: 13px;
+    transition: 0.05s;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: 700;
+}
+
+.main-container #sidebar-left-content section div button:hover {
+    transform: scale(1.05);
+}
+
+.main-container #sidebar-left-content section div span {
+    display: inline-block;
+    margin-bottom: 4px;
+    cursor: default;
+}
+
+/** sidebar end*/
+
+/* todo: main content*/
+.main-container main {
+    background-color: #121212;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.main-container main > header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.main-container main > header > div {
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+
+.main-container main > header > div #div01 {
+    margin-left: 5%;
+    margin-right: 10px;
+}
+
+.main-container main > header > div #div02 {
+    margin: 0 10px;
+}
+
+.main-container main > header > div #div03 {
+    margin: 0 10px;
+}
+
+.main-container main > header > div div button {
+    padding: 2px 10px 2px 10px;
+    border-radius: 13px;
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+/*? starts main content*/
+.main-container .main-content {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.main-container .main-content > section {
+    min-height: 350px;
+    min-width: 100%;
+}
+
+/* album heading*/
+.main-container .album-heading-div {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px 0 16px;
+}
+
+.main-container .album-heading-div #div01 {
+    height: 3rem;
+    width: 3rem;
+    background-image: url("https://i.scdn.co/image/ab6765630000ba8a4e87c207651b687348dc1a31");
+    background-size: cover;
+}
+
+.main-container .album-heading-div #div02 {
+    height: 3rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 0 8px 0 8px;
+}
+
+.main-container .album-heading-div #div02 p span {
+    color: #b3b3b3;
+    font-size: 15px;
+}
+
+.main-container .album-heading-div #div02 a span {
+    color: white;
+}
+
+.main-container .album-heading-div #div02 a:hover {
+    text-decoration: underline;
+}
+
+.main-container .album-heading-div #div03 {
+    height: 3rem;
+    display: flex;
+    align-items: end;
+}
+
+.main-container .album-heading-div #div03 span {
+    color: #b3b3b3;
+    font-size: 15px;
+}
+
+/* starts album songs*/
+.main-container .album-song-div {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0 16px 0 16px;
+}
+
+.main-container .album-song-div > div {
+    min-height: 14rem;
+   /* min-width: 0; /* CRITICAL: Allows the card to shrink if the window is small */
+    flex-shrink: 0;
+    min-width: 9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.main-container .album-song-div > div:hover {
+    background-color: #1f1f1f;
+}
+
+.main-container .album-song-div > div #div01 {
+    min-height: 154px;
+    min-width: 154px;
+    border-radius: 8px;
+}
+
+.main-container .album-song-div > div #div02 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.main-container .album-song-div > div #div02 a span {
+    color: white;
+}
+
+.main-container .album-song-div > div #div02 h5 {
+    color: #b3b3b3;
+}
+
+/* * album-layer01 */
+.main-container #album-layer01 #album01 #div01 {
+    background-image: url("https://i.scdn.co/image/ab67656300005f1fad42b448be4f2bf5561640ee");
+    background-size: contain;
+}
+
+.main-container #album-layer01 #album02 #div01 {
+    background-image: url("https://i.scdn.co/image/ab67656300005f1fa9d86acf03ad43d6e7556a1a");
+    background-size: contain;
+}
+
+.main-container #album-layer01 #album03 #div01 {
+    background-image: url("https://i.scdn.co/image/ab67656300005f1f1f97b6cdba0479538654b44d");
+    background-size: contain;
+}
+
+/* * album-layer02 */
+.main-container #album-layer02 #album01 #div01 {
+    background-image: url("https://i.scdn.co/image/ab67706f000000022b117d6dc96345bedf9adc1b");
+    background-size: contain;
+}
+
+.main-container #album-layer02 #album02 #div01 {
+    background-image: url("https://i.scdn.co/image/ab67706f0000000267899b9c88183d87b31d48af");
+    background-size: contain;
+}
+
+.main-container #album-layer02 #album03 #div01 {
+    background-image: url("https://i.scdn.co/image/ab67706f0000000287bfa759fd5f967d5b730b9a");
+    background-size: contain;
+}
+
+/** sidebar right*/
+.main-container #sidebar-right {
+    border-radius: 8px;
+    
+}
+
+.main-container #sidebar-right header {
+    width: 100%;
+    height: 15%;
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 0 8px;
+}
+
+.main-container #sidebar-right header #btn-cross {
+    height: 40%;
+    width: 10%
+}
+
+.main-container #sidebar-right header > div {
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+    width: 90%;
+}
+
+.main-container #sidebar-right header > div #anchor-text {
+    text-decoration: none;
+}
+
+.main-container #sidebar-right header > div > #btn-div {
+    text-decoration: none;
+}
+
+.main-container #sidebar-right-content {
+    min-width: 100%;
+    height: 85%;
+    padding: 0 5px 0 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink:0;
+    overflow-y: scroll;
+    
+
+}
+
+.main-container #sidebar-right-content > section {
+    background-color: #1f1f1f;
+}
+
+.main-container #sidebar-right-content #section01 {
+    min-height: 258px;
+    min-width: 258px;
+    border-radius: 8px;
+    background-image: url("https://i.scdn.co/image/ab6765630000ba8a4e87c207651b687348dc1a31");
+    background-size: contain;
+}
+
+.main-container #sidebar-right-content #section02 {
+    min-height: 386px;
+    min-width: 258px;
+    border-radius: 8px;
+}
+
+.main-container #sidebar-right-content #section03 {
+    min-height: 286px;
+    min-width: 258px;
+    border-radius: 8px;
+}
+
+.main-container #sidebar-right-content #section04 {
+    min-height: 133px;
+    min-width: 258px;
+    border-radius: 8px;
+}
+
+.now-playing-bar-div button {
+    background-color: black !important;
+    border: none !important;
+    cursor: pointer;
+}
+
+.now-playing-bar-div button:hover span {
+    font-size: 25px !important;
+    color: white !important;
+    transition: 0.2s ease; /* Changed 'smooth' to 'ease' as smooth is not a valid CSS keyword */
+}
+
+.now-playing-bar-div button:active span {
+    color: #949393 !important;
+    transition: 0.2s;
+}
+
+.now-playing-bar-div {
+    /*88-8padding, h=72*/
+    height: 88px;
+    width: 100vw;
+    min-width: 900px; /* prevents collapse*/
+    padding: 8px;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.now-playing-bar-div .playing-bar {
+    /*current h= 72, h-8padding=56*/
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.now-playing-bar-div .playing-bar #section01 {
+    min-height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.now-playing-bar-div #section01-div01 {
+    min-height: 56px;
+    min-width: 56px;
+    background-image: url("https://i.scdn.co/image/ab6765630000f68d4e87c207651b687348dc1a31");
+    background-size: contain;
+}
+
+.now-playing-bar-div #section01-div02 {
+    min-height: 56px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    padding: 0 8px 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.now-playing-bar-div #section01-div02-div01 span {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 15px;
+    color: white;
+}
+
+.now-playing-bar-div #section01-div02-div02 span {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 500;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.now-playing-bar-div #section01-div03 {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.now-playing-bar-div #section01-div03 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.now-playing-bar-div #btn-add_circle span {
+    color: #b3b3b3;
+}
+
+/*todo:----------------------------------------------------*/
+.now-playing-bar-div .section02 {
+    height: 60.8px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.now-playing-bar-div .section02-div01 {
+    height: 40px;
+    padding: 0 0 8px 0;
+    display: flex;
+    gap: 16px;
+}
+
+.now-playing-bar-div .section02-div01-div01 {
+    flex-grow: 1;
+    display: flex;
+    gap: 8px;
+    justify-content: end;
+}
+
+.now-playing-bar-div #btn-replay_30,
+.now-playing-bar-div #btn-skip_previous,
+.now-playing-bar-div #btn-skip_next,
+.now-playing-bar-div #btn-forward_30 {
+    height: 32px;
+    width: 32px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.now-playing-bar-div #btn-replay_30 span,
+.now-playing-bar-div #btn-skip_previous span,
+.now-playing-bar-div #btn-skip_next span,
+.now-playing-bar-div #btn-forward_30 span {
+    color: #b3b3b3;
+}
+
+.now-playing-bar-div .section02-div01-div02 {
+    height: 32px;
+    width: 32px;
+}
+
+.now-playing-bar-div #btn-play {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.now-playing-bar-div #btn-play span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-image: url('play_musicbar.png');
+    background-size: cover;
+}
+
+.now-playing-bar-div .section02-div01-div03 {
+    flex-grow: 1;
+    display: flex;
+    gap: 8px;
+}
+
+.now-playing-bar-div .section02-div02 {
+    height: 20.8px;
+    flex-grow: 1;
+    display: flex;
+    gap: 8px;
+    
+}
+
+
+.now-playing-bar-div .section02-div02-time01 span,
+.now-playing-bar-div .section02-div02-time02 span {
+    padding: 0 0 0 4px;
+    font-family: "Roboto", sans-serif;
+    color: #b3b3b3;
+    
+}
+
+.now-playing-bar-div .section02-div02-playing {
+    flex-grow: 1;
+    padding: 0 4px 0 4px;
+    display: flex;
+    gap: 2px;
+    padding:0 0 8px 0;
+}
+
+.now-playing-bar-div .time-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.now-playing-bar-div .time-div span {
+    display: block;
+    height: 4px;
+    width: 100px;
+    background-color: white;
+    
+}
+
+.now-playing-bar-div .section03 {
+    height: 32px;
+    flex-grow: 1;
+    align-self: center;
+    display: flex;
+    justify-content: end;
+}
+
+.now-playing-bar-div #btn-queue_music,
+.now-playing-bar-div #btn-google_home_devices,
+.now-playing-bar-div #btn-speaker,
+.now-playing-bar-div #volume-div,
+.now-playing-bar-div #btn-featured_video,
+.now-playing-bar-div #btn-Fullscreen {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.now-playing-bar-div #btn-queue_music span,
+.now-playing-bar-div #btn-google_home_devices span,
+.now-playing-bar-div #btn-speaker span,
+.now-playing-bar-div #btn-featured_video span,
+.now-playing-bar-div #btn-Fullscreen span {
+    color: #b3b3b3;
+}
+
+.now-playing-bar-div #btn-featured_video {
+    transform: rotate(180deg);
+}
+
+.now-playing-bar-div #volume-div span {
+    display: block;
+    height: 4px;
+    width: 100px;
+    background-color: white;
+}
