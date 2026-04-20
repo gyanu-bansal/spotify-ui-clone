@@ -12,4 +12,4 @@ Frontend clone of Spotify's UI using HTML and CSS.
 2. Open integrated.html
 
 ## Preview
-![Preview](spotifyclone.jpg)
+![Preview](spotifyclone.png)
